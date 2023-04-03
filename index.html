@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script>
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -8.198148, lng: 112.507982 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+      window.initMap = initMap;
+    </script> -->
     <title>Milki</title>
 </head>
 <body>
@@ -286,6 +304,10 @@
     </section>
     <!-- Contact Section End -->
 
+    <!-- maps -->
+    <div id="map"></div>
+    <!-- maps end -->
+
     <!-- footer start -->
     <footer class="bg-dark pt-24 pb-12">
         <div class="container">
@@ -368,5 +390,12 @@
 
 
     <script src="dist/js/script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3NDQL7pyXH7bPRDB469eP_qCqYPRYiSI&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3NDQL7pyXH7bPRDB469eP_qCqYPRYiSI&callback=initMap">
+    </script>
 </body>
 </html>
