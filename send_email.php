@@ -11,9 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body = "Nama: $name\nEmail: $email\n\nPesan:\n$message";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Pesan berhasil dikirim!";
+        echo "<script type='text/javascript'>alert('Pesan berhasil terkirim');window.location.href='https://milki.chickencode.org/';</script>";
     } else {
         echo "Pesan gagal dikirim.";
+        echo "<a href='https://milki.chickencode.org/'> Kembali </a>";
     }
 }
 ?>
